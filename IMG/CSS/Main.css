@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration:none;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  //background-image: url(../PIcs/1.jpg);
+}
+
+.logo {
+  margin: 15px auto;
+  text-transform: uppercase;
+  width: 160px;
+  font-family: monospace;
+  font-size: 34px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  -ms-user-select: none;
+  //border: 1px solid red;
+}
+
+#dot {
+  position:relative;
+  top: -7px;
+  left: -2px;
+  display: inline-block;
+  letter-spacing: 0;
+  //border: 1px solid red;
+  font-size: 30px;
+}
+
+nav {
+  //background-color: black;
+  width:80%;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0 auto;
+  width: 390px;
+  //border: 1px solid red;
+}
+
+li {
+  list-style: none;
+  margin: 20px;
+  display:inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+li a {
+  color: #000;
+}
+
+li:hover a, #forward:hover, #back:hover {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.banner {
+  width: 80%;
+  display:flex;
+  align-items: flex-start;
+  margin: 0 auto;
+  background-image: url(../PIcs/1.jpg);
+  height: 500px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: 50% -50px;
+  background-attachment: fixed;
+  //animation: carousel 20s infinite ease-in-out;
+}
+
+
+/*@keyframes carousel {
+  0%, 25%  {background-position: 50% -200px, 15% -150px, 60% -490px}
+  30%, 55% {background-position: 300% -200px, 15% -150px, 60% -490px }
+  60%, 85% {background-position: 300% -200px, 330% -150px, 60% -490px}
+}*/
+
+.textLine {
+  font-size: 46px;
+  color:#fff;
+  font-weight: bold;
+  margin: auto;
+  text-transform: uppercase;
+  //margin-top: 220px;
+  //border: 1px solid red;
+}
+
+.blackStrip {
+  //background-color: #000;
+  height: 60px;
+  line-height: 60px;
+  width: 80%;
+  margin:0 auto;
+  color: #000;
+  font-size: 20px;
+  //text-align: center;
+}
+
+
+#forward, #back {
+  display: inline-block;
+//  border: 1px solid red;
+  margin: 0 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+#forward {
+  float:right;
+}
+
+#back {
+  color: #000;
+  display: none;
+}
+
+.titles {
+  font-size: 36px;
+  color: black;
+  opacity: 0.4;
+  font-weight: bold;;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+.container {
+  //border: 1px solid red;
+  width: 80%;
+  height: auto;
+  margin: 70px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container div {
+  width: 335px;
+  height: 530px;
+  //border-bottom: 30px solid black;
+  //border-top: 30px solid black;
+  text-align: center;
+  overflow: hidden;
+  margin: 30px;
+  border-radius: 10px;
+  //position: relative;
+  padding-bottom: 0;
+}
+
+img {
+  height: 530px;
+  margin: 0px auto;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 1600px) {
+  .container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container div {
+    width: 400px;
+    height: 630px;
+  }
+  img {
+    height: 630px;
+  }
+}
+
+.is-showing {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.hr-text {
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 100;
+  width: 80%;
+  margin: 35px auto;
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: .5;
+}
+.hr-text:before {
+  content: '';
+  background: black;
+  //background: linear-gradient(to right, transparent, #818078, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+.hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 .5em;
+  line-height: 1.5em;
+  color: black;
+  background-color: #fcfcfa;
+  text-transform: uppercase;
+}
+
+.round-window {
+  height: 550px;
+  width: 550px;
+  border-radius: 50%;
+  position: relative;
+  left: 230px;
+  background-image: url(../PIcs/Author.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% calc(100% + 110px);
+  background-attachment: fixed;
+  //border: 1px solid black;
+  margin: 100px auto;
+}
