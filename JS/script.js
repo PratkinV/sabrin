@@ -14,7 +14,7 @@ $(document).ready(function() {
       $i=$i+1;
     }
 
-    if ($i < 5) {
+    if ($i < 4) {
 
       //  console.log($i);
       $('.banner').fadeOut($timeOut).fadeIn($timeOut);

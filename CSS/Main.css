@@ -4,6 +4,11 @@
   text-decoration:none;
 }
 
+body, html {
+	/* important */
+	height: 100%;
+}
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   //background-image: url(../PIcs/1.jpg);
@@ -66,7 +71,7 @@ li:hover a, #forward:hover, #back:hover {
 }
 
 .banner {
-  width: 80%;
+  width: 100%;
   display:flex;
   align-items: flex-start;
   margin: 0 auto;
@@ -126,11 +131,12 @@ li:hover a, #forward:hover, #back:hover {
 }
 
 .quote {
-  width: 40%;
+  width: 35%;
+  font-size: 20px;
   margin: 0 auto;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   text-align: center;
-  color: #ccc;
+  color: #000;
 }
 
 .titles {
@@ -148,7 +154,7 @@ li:hover a, #forward:hover, #back:hover {
   //border: 1px solid red;
   width: 80%;
   height: auto;
-  margin: 70px auto;
+  margin: 50px auto 80px auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -162,11 +168,10 @@ li:hover a, #forward:hover, #back:hover {
   text-align: center;
   overflow: hidden;
   margin: 30px;
-  //border-radius: 10px;
+  border-radius: 7px;
   //position: relative;
   padding-bottom: 0;
 }
-
 
 img {
   height: 530px;
@@ -201,11 +206,11 @@ img:hover {
   transform: translateX(0px);
 }
 
-.hr-text {
+.hr-text, .quote-author {
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: 100;
-  width: 80%;
+  width: 100%;
   margin: 35px auto;
   line-height: 1em;
   position: relative;
@@ -216,7 +221,14 @@ img:hover {
   height: 1.5em;
   opacity: .5;
 }
-.hr-text:before {
+
+.quote-author {
+  width: 170px;
+  margin: 35px auto 70px auto;
+  letter-spacing: 1px;
+}
+
+.hr-text:before, .quote-author:before {
   content: '';
   background: black;
   //background: linear-gradient(to right, transparent, #818078, transparent);
@@ -226,7 +238,8 @@ img:hover {
   width: 100%;
   height: 1px;
 }
-.hr-text:after {
+
+.hr-text:after, .quote-author:after {
   content: attr(data-content);
   position: relative;
   display: inline-block;
@@ -238,10 +251,14 @@ img:hover {
   text-transform: uppercase;
 }
 
+.quote-author:after {
+  text-transform: none;
+}
+
 .textWraper {
   //border: 1px solid #ccc;
   width: 60%;
-  margin: 100px auto;
+  margin: 80px auto;
   position: relative;
   //top: 250px;
   overflow: inherit;
@@ -250,19 +267,76 @@ img:hover {
 p.aboutText {
   width: 45%;
   position: absolute;
+  line-height: 150%;
 }
 
 .round-window {
-  height: 550px;
-  width: 550px;
-  //border-radius: 50%;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
   position: relative;
   left: 230px;
   background-image: url(../PIcs/Author.jpg);
   background-repeat: no-repeat;
-  background-position: 50% calc(100% + 110px);
+  background-position: 50% calc(80% + 110px);
   background-attachment: fixed;
   //border: 1px solid black;
-  margin: 100px auto;
+  margin: 80px auto;
   //margin-bottom: 100px;
 }
+
+div.big-photo-1, div.big-photo-2, div.big-photo-3, div.big-photo-4 {
+  min-height: 100%;
+  //width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  //border: 1px solid red;
+}
+
+div.big-photo-1 {
+  background-image: url(../PIcs/10.jpg);
+  margin-top: 80px;
+}
+
+div.big-photo-2 {
+  background-image: url(../PIcs/11.jpg);
+  background-position: 50% top;
+}
+
+div.big-photo-3 {
+
+  background-image: url(../PIcs/12.jpg);
+  background-position: 50% top;
+  margin-bottom: 80px;
+}
+/*
+div.big-photo-4 {
+  background-image: url(../PIcs/111.jpg);
+  background-position: 50% top;
+
+}
+*/
+
+div.contacts-info {
+  //background-color: #aaa;
+  height: 50px;
+  width: 700px;
+  color: black;
+  opacity: 0.4;
+  font-size: 20px;
+
+}
+
+footer li a {
+  color: #FFF;
+}
+
+ footer {
+   height: 500px;
+   background-image: url(../PIcs/footer.jpg);
+   background-repeat: no-repeat;
+   background-position: 50% bottom;
+   background-attachment: fixed;
+ }
