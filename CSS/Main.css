@@ -15,13 +15,6 @@ body {
   //background-image: url(../PIcs/1.jpg);
 }
 
-.content {
-  background-color: white;
-  margin-bottom: 250px;
-  z-index: 2;
-  height: 450px;
-}
-
 a[name="Home"] {
   position:relative;
   top:-20px;
@@ -169,20 +162,20 @@ li:hover a, #forward:hover, #back:hover {
 }
 
 .container div {
-  width: 335px;
-  height: 530px;
+  width: 285px;
+  height: 450px;
   //border-bottom: 30px solid black;
   //border-top: 30px solid black;
   text-align: center;
   overflow: hidden;
-  margin: 30px;
+  margin: 20px;
   //border-radius: 7px;
   //position: relative;
   padding-bottom: 0;
 }
 
 img {
-  height: 530px;
+  height: 450px;
   margin: 0px auto;
   opacity: 0;
   transform: translateX(30px);
@@ -193,13 +186,13 @@ img:hover {
   transform: scale(1.2);
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1500px) {
   .container {
     justify-content: center;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .container div {
     width: 400px;
     height: 630px;
@@ -294,6 +287,27 @@ p.aboutText {
   //margin-bottom: 100px;
 }
 
+@media (max-width: 1000px) {
+  p.aboutText {
+    width: 100%;
+    position: relative;
+    line-height: 160%;
+  }
+
+  .round-window {
+    left: 0px;
+    background-image: url(../PIcs/Author2.jpg);
+  }
+
+  .quote {
+    width: 60%;
+  }
+}
+
+
+
+
+
 div.big-photo-1, div.big-photo-2, div.big-photo-3, div.big-photo-4 {
   min-height: 100%;
   //width: 100%;
@@ -339,9 +353,11 @@ div.contacts-info {
 
 }
 
-footer li a {
-  color: #FFF;
-  z-index: -1;
+.content {
+  background-color: white;
+  margin-bottom: 250px;
+  z-index: 2;
+  height: 450px;
 }
 
  footer {
@@ -373,6 +389,11 @@ footer li a {
  footer ul li {
    //border: 1px solid blue;
    list-style: none;
+   z-index: -1;
+ }
+
+ footer li a {
+   color: #FFF;
    z-index: -1;
  }
 
