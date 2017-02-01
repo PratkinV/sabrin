@@ -55,6 +55,18 @@ $(document).ready(function() {
 
     }
 
+    if (wScroll > $('.content').offset().top - ($(window).height()/2)) {
+
+      $('footer').css({
+        'display': 'block'
+      });
+
+    } else {
+      $('footer').css({
+        'display': 'none'
+      });
+    }
+
   });
 
   $('a[href*="#"]:not([href="#"])').click(function() {
