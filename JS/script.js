@@ -24,12 +24,10 @@ $(document).ready(function() {
        $('.banner').fadeOut($timeOut).fadeIn($timeOut);
        setTimeout(function() {changePic($i)}, $timeOut);
      };
+
      clearInterval(refreshIntervalId);
      refreshIntervalId = setInterval(startChangePic, 7000);
-     //refreshIntervalId;
-     /*setInterval(function(){
-        startChangePic();
-      }, 7000);*/
+
   };
 
   //Calling function for changing banner picture every 7 seconds
@@ -67,7 +65,7 @@ $(document).ready(function() {
 
     }
 
-    if (wScroll > $('.contacts-footer-container').offset().top - ($(window).height()-410)) {
+    if (wScroll > $('.contacts-footer-container').offset().top - ($(window).height()-490)) {
       $('footer').css({
         'display': 'block'
       });
@@ -93,6 +91,15 @@ $(document).ready(function() {
     }
   });
 
+  $('.awesome-form .input-group textarea, .awesome-form .input-group input').focusout(function() {
+    var text_val = $(this).val();
+    if (text_val === "") {
+      $(this).removeClass('has-value');
+    } else {
+      $(this).addClass('has-value');
+    }
+
+  });
 
 
 });
