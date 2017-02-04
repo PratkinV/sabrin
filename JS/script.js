@@ -102,4 +102,17 @@ $(document).ready(function() {
   });
 
 
+/*
+  $('.container div img').click(function(){
+    $(this).css({'transform': 'scale(1.2)'});
+    $(this).parents('.container div').css({'transform': 'scale(1.3)'});
+    $(this).parents('.container div').css({'position': 'absolute'});
+    $(this).parents('.container div').css({'top': '50%'});
+  });
+*/
+
+
+
+
+
 });
