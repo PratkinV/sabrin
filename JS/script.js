@@ -104,10 +104,18 @@ $(document).ready(function() {
 
 /*
   $('.container div img').click(function(){
-    $(this).css({'transform': 'scale(1.2)'});
-    $(this).parents('.container div').css({'transform': 'scale(1.3)'});
-    $(this).parents('.container div').css({'position': 'absolute'});
-    $(this).parents('.container div').css({'top': '50%'});
+    //$(this).css({'transform': 'scale(1.7)'});
+    $(this).parents('.container div').css({'z-index': '3'});
+  //  $(this).parents('.container div').css({'transform': 'translateY(-50%) translateX(-50%)'});
+    $(this).parents('.container div').css({'position': 'fixed'});
+    $(this).parents('.container div').css({'top': '0'});
+    $(this).parents('.container div').css({'left': '0'});
+    $(this).parents('.container div').css({'right': '0'});
+    $(this).parents('.container div').css({'bottom': '0'});
+      $(this).parents('.container div').css({'width': '100%'});
+    //$(this).css({'transform': 'scale(1.7)'});
+    //$(this).parents('.container div').css({'transform': 'translateY(-50%)'});
+
   });
 */
 
