@@ -323,18 +323,18 @@ div.big-photo-1, div.big-photo-2, div.big-photo-3, div.big-photo-4 {
 }
 
 div.big-photo-1 {
-  background-image: url(PIcs/10.jpg);
+  background-image: url('../PIcs/10.jpg');
   margin-top: 80px;
 }
 
 div.big-photo-2 {
-  background-image: url(PIcs/11.jpg);
+  background-image: url(../PIcs/11.jpg);
   background-position: 50% top;
 }
 
 div.big-photo-3 {
 
-  background-image: url(PIcs/12.jpg);
+  background-image: url(../PIcs/12.jpg);
   background-position: 50% top;
   margin-bottom: 80px;
 }
