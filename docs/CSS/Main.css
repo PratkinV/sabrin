@@ -194,21 +194,7 @@ img:hover {
   //transform: scale(1.2);
 }
 
-@media (max-width: 1500px) {
-  .container {
-    justify-content: center;
-  }
-}
 
-@media (max-width: 850px) {
-  .container div {
-    width: 400px;
-    height: 630px;
-  }
-  a img {
-    height: 630px;
-  }
-}
 
 .is-showing {
   opacity: 1;
@@ -562,4 +548,46 @@ textarea:focus + label, textarea.has-value + label {
    font-size: 12px;
    text-transform: uppercase;
    color: #999;
+ }
+
+
+ @media (max-width: 1500px) {
+   .container {
+     justify-content: center;
+   }
+ }
+
+ @media (max-width: 850px) {
+   .container {
+     width: 100%;
+   }
+
+   .banner-slogan {
+     font-size: 26px;
+   }
+
+   .quote {
+     width: 90%;
+     font-size: 18px;
+   }
+
+   .about-text-container {
+     width: 83%;
+   }
+
+
+   /*
+   .container div {
+     width: 400px;
+     height: 630px;
+   }
+   a img {
+     height: 630px;
+   }*/
+ }
+
+ @media (max-width: 500px) {
+   .round-window {
+     transform: scale(0.7) translateX(-80px);
+   }
  }
