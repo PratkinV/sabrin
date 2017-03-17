@@ -515,24 +515,40 @@ textarea:focus + label, textarea.has-value + label {
 }
 
 @media (max-width: 530px) {
+
+
+  .contacts-footer-container {
+
+    height: 970px;
+
+  }
   div.contacts-info {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     font-size: 16px;
     text-align: center;
-
+    height: 120px;
   }
+
   div.contacts-info p:first-child, div.contacts-info p:last-child {
-    font-size: 14.5px;
+    font-size: 16px;
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   div.contacts-info p:last-child {
-    transform: translateX(-15px);
+    //transform: translateX(-15px);
+    width: 230px;
   }
 
   div.contacts-info p:nth-child(2) {
-    font-size: 15px;
+    font-size: 16px;
+  //  margin-top: 30px;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .form-container {
@@ -540,7 +556,7 @@ textarea:focus + label, textarea.has-value + label {
     position: relative;
     left: 0px;
     padding: 30px auto;
-    width: 330px;
+    width: 310px;
     height: 340px;
     margin-bottom: 170px;
   }
@@ -570,7 +586,7 @@ textarea:focus + label, textarea.has-value + label {
   }
 
   input[type="text"], input[type="email"] {
-    width: 151px;
+    width: 145px;
   }
 
   #subject-input {
@@ -594,7 +610,7 @@ textarea:focus + label, textarea.has-value + label {
   .name {
   //  border: 1px solid red;
     display: inline-block;
-    margin-right: 21px;
+    margin-right: 10px;
     position: relative;
   }
 
