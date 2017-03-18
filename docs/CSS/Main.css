@@ -291,7 +291,6 @@ p.about-text {
   width: 45%;
   position: absolute;
   line-height: 160%;
-
 }
 
 .round-window {
@@ -379,9 +378,7 @@ div.contacts-info {
 
 
 div.contacts-info p:first-child, div.contacts-info p:last-child {
-  font-size: 17.5px;
-  //opacity: 0.4;
-  font-weight: lighter;
+  font-size: 17.5px;  
 }
 
 
@@ -538,8 +535,7 @@ textarea:focus + label, textarea.has-value + label {
     margin-right: auto;
   }
 
-  div.contacts-info p:last-child {
-    //transform: translateX(-15px);
+  div.contacts-info p:last-child {    
     width: 230px;
   }
 
