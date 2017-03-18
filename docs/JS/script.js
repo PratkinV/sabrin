@@ -42,14 +42,18 @@ $(document).ready(function() {
       
     var winH = $(window).height(),
     winW = $(window).width(),
-    speedPar = 2;
+    speedPar = {
+        speed: 2,
+        direction: -100
+    };        
       
-      console.log(speedPar);
+      
       
     if (winW <= 530) {
-        speedPar = -2;
+        speedPar.speed = -2;
+        speedPar.direction = 100;
     }
-    console.log(speedPar);
+   
 
     $('.banner-slogan').css({
       'transform': 'translate(0px, ' + wScroll/1.35 + '%)',
@@ -57,12 +61,12 @@ $(document).ready(function() {
     });
 
     $('.banner').css({
-      'background-position': '50% ' + (-100-wScroll)/speedPar +'px'
+      'background-position': '50% ' + (speedPar.direction-wScroll)/speedPar.speed +'px'
     });
 
 
     $('.round-window').css({
-      'background-position': '50% ' + ($('.round-window').offset().top-wScroll)/2 +'px'
+      'background-position': '50% ' + ($('.round-window').offset().top-wScroll)/speedPar.speed +'px'
     });
 
 
