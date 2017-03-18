@@ -1,6 +1,8 @@
 $(document).ready(function() {
   //alert('Welcome!');
-    var $i = 2;
+    var $i = 2,
+    winH = $(window).height(),
+    winW = $(window).width();
 
   $('.logo').hover(function() {
     $(this).children('#dot').toggleClass('animated bounce');
@@ -8,15 +10,21 @@ $(document).ready(function() {
 
 
   function startChangePic() {
-     var $timeOut = 500;
+     var $timeOut = 500,
+     picForMobile = "";
+      
+      
+     if (winW <= 530) {
+        picForMobile = "-s";
+     }
 
 
      function changePic(iterator) {
-       $('.banner').css({"background-image": "url(PIcs/" + iterator +".jpg)"});
+       $('.banner').css({"background-image": "url(PIcs/" + iterator + picForMobile +".jpg)"});
        $i=$i+1;
      }
 
-     if ($i < 6) {
+     if ($i <= 3) {
        $('.banner').fadeOut($timeOut).fadeIn($timeOut);
        setTimeout(function() {changePic($i)}, $timeOut);
      } else {
@@ -40,14 +48,11 @@ $(document).ready(function() {
   $(window).scroll(function() {
     var wScroll = $(this).scrollTop();
       
-    var winH = $(window).height(),
-    winW = $(window).width(),
-    speedPar = {
+    
+    var speedPar = {
         speed: 2,
         direction: -100
-    };        
-      
-      
+    };      
       
     if (winW <= 530) {
         speedPar.speed = -2;
