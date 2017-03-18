@@ -47,7 +47,7 @@ $(document).ready(function() {
       console.log(speedPar);
       
     if (winW <= 530) {
-        speedPar = 12;
+        speedPar = 40;
     }
     console.log(speedPar);
 
