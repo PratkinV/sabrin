@@ -39,6 +39,17 @@ $(document).ready(function() {
   //Start of Parallax related script
   $(window).scroll(function() {
     var wScroll = $(this).scrollTop();
+      
+    var winH = $(window).height(),
+    winW = $(window).width(),
+    speedPar = 2;
+      
+      console.log(speedPar);
+      
+    if (winW <= 530) {
+        speedPar = 8;
+    }
+    console.log(speedPar);
 
     $('.banner-slogan').css({
       'transform': 'translate(0px, ' + wScroll/1.35 + '%)',
@@ -46,7 +57,7 @@ $(document).ready(function() {
     });
 
     $('.banner').css({
-      'background-position': '50% ' + (-100-wScroll)/2 +'px'
+      'background-position': '50% ' + (-100-wScroll)/speedPar +'px'
     });
 
 
