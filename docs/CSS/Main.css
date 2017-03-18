@@ -535,7 +535,7 @@ textarea:focus + label, textarea.has-value + label {
   }
 
   div.contacts-info p:first-child, div.contacts-info p:last-child {
-    font-size: 16.5px;
+    font-size: 18px;
     width: 270px;
     margin-left: auto;
     margin-right: auto;
@@ -727,6 +727,12 @@ textarea:focus + label, textarea.has-value + label {
    .round-window {
      height: 320px;
      width: 320px;
-     //border: 1px solid red;
+     //border: 1px solid red;       
    }
+     
+   .titles {
+     font-size: 20px;
+    }
  }
+
+
