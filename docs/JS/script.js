@@ -16,7 +16,7 @@ $(document).ready(function() {
        $i=$i+1;
      }
 
-     if ($i < 4) {
+     if ($i < 6) {
        $('.banner').fadeOut($timeOut).fadeIn($timeOut);
        setTimeout(function() {changePic($i)}, $timeOut);
      } else {
