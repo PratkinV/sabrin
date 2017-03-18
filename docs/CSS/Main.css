@@ -109,6 +109,12 @@ li:hover a, #forward:hover, #back:hover {
   //animation: carousel 20s infinite ease-in-out;
 }
 
+@media (max-width: 530px) {
+    .banner {
+        background-image: url(../PIcs/1-s.jpg);
+    }
+}
+
 
 /*@keyframes carousel {
   0%, 25%  {background-position: 50% -200px, 15% -150px, 60% -490px}
@@ -719,8 +725,8 @@ textarea:focus + label, textarea.has-value + label {
 
  @media (max-width: 530px) {
    .round-window {
-     height: 330px;
-     width: 330px;
+     height: 320px;
+     width: 320px;
      //border: 1px solid red;
    }
  }
