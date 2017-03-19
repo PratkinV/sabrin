@@ -188,21 +188,19 @@ li:hover a, #forward:hover, #back:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  //position:relative;
+ 
 }
 
 .container div {
   width: 285px;
-  height: 450px;
-  //border-bottom: 30px solid black;
-  //border-top: 30px solid black;
+  height: 450px;  
   text-align: center;
-  overflow: hidden;
+  //overflow: hidden;
   margin: 20px;
-  //border-radius: 7px;
+  border-radius: 7px;
   position: relative;
   padding-bottom: 0;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .container div:hover {
@@ -219,15 +217,10 @@ a img {
   margin: 0px auto;
   border:0;
   opacity: 0;
-  transform: translateX(30px);
-  transition: all 0.3s ease-in-out;
-
+  transform: translateX(50px);
+  transition: all 0.5s ease-in-out;
+  border-radius: 7px;
 }
-
-img:hover {
-  //transform: scale(1.2);
-}
-
 
 
 .is-showing {
@@ -333,7 +326,7 @@ p.about-text {
 
 div.big-photo-1, div.big-photo-2, div.big-photo-3, div.big-photo-4 {
   min-height: 100%;
-  //width: 100%;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -344,6 +337,7 @@ div.big-photo-1, div.big-photo-2, div.big-photo-3, div.big-photo-4 {
 div.big-photo-1 {
   background-image: url('../PIcs/10.jpg');
   margin-top: 80px;
+  background-position: 50% top;
 }
 
 div.big-photo-2 {
@@ -352,7 +346,6 @@ div.big-photo-2 {
 }
 
 div.big-photo-3 {
-
   background-image: url(../PIcs/12.jpg);
   background-position: 50% top;
   margin-bottom: 80px;
@@ -365,53 +358,38 @@ div.big-photo-4 {
 }
 */
 
-div.contacts-info {
-  //background-color: #aaa;
-  //border: 1px solid blue;
+div.contacts-info {  
   height: 50px;
   width: 420px;
-  overflow: visible;
-  color: black;
-  //font-weight: bold;
-  opacity: 1;
+  overflow: visible;  
   font-size: 20px;
-  margin: 80px auto 80px auto;
-  text-align: left;
+  margin: 80px auto 80px auto;  
   font-size: 17.5px;
 }
-
-
-
 
 div.contacts-info p:first-child, div.contacts-info p:last-child {
   font-size: 17.5px;  
 }
 
-
-div.contacts-info p:nth-child(2) {
-  //margin-top: 10px;
+div.contacts-info p:nth-child(2) {  
   opacity: 0.4;
   font-style: italic;
   font-family: Georgia, Cambria, serif;
-
 }
 
 span.contact-email {
   text-decoration: underline;
-
 }
 
 .contacts-footer-container {
   background-color: white;
   margin-bottom: 250px;
   z-index: 2;
-  height: 900px;
-  //border: 1px solid red;
+  height: 900px;  
 }
 
 
-.form-container {
-  //border: 1px solid black;
+.form-container {  
   position: relative;
   left: 20px;
   margin: 0 auto;
@@ -462,8 +440,7 @@ input[type="email"] {
 input[type="button"] {
   text-transform: uppercase;
   font-size: 16px;
-  margin-top: 20px;
-  //margin-left: 278px;
+  margin-top: 20px; 
 }
 
 input[type="button"]:active {
@@ -478,7 +455,6 @@ input[type="button"]:hover {
 }
 
 .input-group {
-//  border: 1px solid red;
   display: inline-block;
   margin-right: 20px;
   position: relative;
@@ -498,8 +474,6 @@ input[type="button"]:hover {
   transition: all 0.2s ease-in-out;
 }
 
-
-
 .input-group input {
   padding: 15px 0px;
 }
@@ -511,128 +485,10 @@ input[type="button"]:hover {
 }
 
 textarea:focus + label, textarea.has-value + label {
-  top: 25px;
-  //left: 10px;
+  top: 25px;  
   font-size: 12px;
   color: #aaa;
 }
-
-@media (max-width: 530px) {
-
-
-  .contacts-footer-container {
-
-    height: 970px;
-
-  }
-  div.contacts-info {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 16px;
-    text-align: center;
-    height: 120px;
-  }
-
-  div.contacts-info p:first-child, div.contacts-info p:last-child {
-    font-size: 18px;
-    width: 270px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  div.contacts-info p:last-child {    
-    width: 240px;
-  }
-
-  div.contacts-info p:nth-child(2) {
-    font-size: 16px;
-  //  margin-top: 30px;
-    width: 220px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .form-container {
-    //border: 1px solid black;
-    position: relative;
-    left: 0px;
-    padding: 30px auto;
-    width: 310px;
-    height: 340px;
-    margin-bottom: 170px;
-  }
-
-
-  input {
-    background: none;
-    border: solid 1px black;
-    color: black;
-    padding: 15px 40px;
-    font-size: 18px;
-    display: block;
-    margin-bottom: 25px;
-  }
-
-  textarea {
-    font-size: 18px;
-    border: solid 1px black;
-    margin-top: 48px;
-    font-family: Arial;
-    width: 99%;
-    overflow: auto;
-  }
-
-  input:focus, input:active, textarea {
-    outline: none;
-  }
-
-  input[type="text"], input[type="email"] {
-    width: 147px;
-  }
-
-  #subject-input {
-    width: 99%;
-  }
-
-  input[type="email"] {
-    padding-left: 0;
-  }
-
-  .input-group {
-    margin-right: 0;
-  }
-
-  .name {
-  //  border: 1px solid red;
-    display: inline-block;
-    margin-right: 10px;
-    position: relative;
-  }
-
-
-  .input-group label {
-    font-size: 15px;
-  }
-
-  .input-group input {
-    padding: 15px 0px;
-  }
-
-  .input-group input:focus + label, input.has-value + label, .input-group {
-    top: -7px;
-    font-size: 12px;
-    color: #aaa;
-  }
-
-  textarea:focus + label, textarea.has-value + label {
-    top: 25px;
-    //left: 10px;
-    font-size: 12px;
-    color: #aaa;
-  }
-}
-
 
 
  footer {
@@ -686,7 +542,7 @@ textarea:focus + label, textarea.has-value + label {
  }
 
 
-
+/*---- @MEDIA RULES START HERE ----*/
 
  @media (max-width: 1500px) {
    .container {
@@ -711,28 +567,103 @@ textarea:focus + label, textarea.has-value + label {
    .about-text-container {
      width: 83%;
    }
-
-
-   /*
-   .container div {
-     width: 400px;
-     height: 630px;
-   }
-   a img {
-     height: 630px;
-   }*/
  }
 
  @media (max-width: 530px) {
-   .round-window {
-     height: 320px;
-     width: 320px;
-     //border: 1px solid red;       
-   }
+  .hr-text--mobile {
+    width: 90%;  
+    height: 40px;
+  }
+  .round-window {
+    height: 310px;
+    width: 310px;           
+  }
      
-   .titles {
-     font-size: 20px;
-    }
+  .titles {
+    font-size: 20px;
+  }
+
+  div.big-photo-1 {  
+    background-position: 40% top;
+  }
+
+  div.big-photo-2 { 
+    background-position: 22% top;
+  }
+
+  div.big-photo-3 {  
+    background-position: 87% top;  
+  }
+     
+  .contacts-footer-container {
+    height: 970px;
+  }
+    
+  div.contacts-info {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    text-align: center;
+    height: 120px;
+  }
+
+  div.contacts-info p:first-child {
+    font-size: 18px;
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.contacts-info p:nth-child(2) {
+    font-size: 16px; 
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    
+  div.contacts-info p:last-child {    
+    font-size: 15px;
+    width: 100%;    
+    margin: 22px auto 0;
+  }
+
+  .form-container {       
+    left: 0px;    
+    width: 310px;    
+  }
+
+  textarea {   
+    width: 99%;   
+  }
+
+  input[type="text"], input[type="email"] {
+    width: 147px;
+  }
+
+  #subject-input {
+    width: 99%;
+  }
+
+  input[type="email"] {
+    padding-left: 0;
+  }
+
+  .input-group {
+    margin-right: 0;
+  }
+
+  .name {  
+    margin-right: 10px;    
+  }
+
+  .input-group label {
+    font-size: 15px;
+  }
+
+  .input-group input {
+    padding: 15px 0px;
+  }  
  }
 
 

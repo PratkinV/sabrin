@@ -1,8 +1,6 @@
 $(document).ready(function() {
   //alert('Welcome!');
-    var $i = 2,
-    winH = $(window).height(),
-    winW = $(window).width();
+    var $i = 2;    
 
   $('.logo').hover(function() {
     $(this).children('#dot').toggleClass('animated bounce');
@@ -11,15 +9,13 @@ $(document).ready(function() {
 
   function startChangePic() {
      var $timeOut = 500,
-     picForMobile = "";
+     picForMobile = "";      
       
-      
-     if (winW <= 530) {
+     if ($(window).width() <= 530) {
         picForMobile = "-s";
      }
 
-
-     function changePic(iterator) {
+     function changePic(iterator) {        
        $('.banner').css({"background-image": "url(PIcs/" + iterator + picForMobile +".jpg)"});
        $i=$i+1;
      }
@@ -45,16 +41,15 @@ $(document).ready(function() {
 
 
   //Start of Parallax related script
-  $(window).scroll(function() {
-    var wScroll = $(this).scrollTop();
-      
+  $(window).scroll(function() {      
+    var wScroll = $(this).scrollTop();     
     
     var speedPar = {
         speed: 2,
         direction: -100
     };      
       
-    if (winW <= 530) {
+    if ($(window).width() <= 530) {
         speedPar.speed = -2;
         speedPar.direction = 100;
     }
@@ -74,7 +69,7 @@ $(document).ready(function() {
       'background-position': '50% ' + ($('.round-window').offset().top-wScroll)/speedPar.speed +'px'
     });
 
-
+/*
     if (wScroll > $('.container').offset().top - ($(window).height()/1.3)) {
 
       $('.container img').each(function(i) {
@@ -84,8 +79,22 @@ $(document).ready(function() {
       })
 
     }
+*/
+    if (wScroll > $('.container').offset().top - ($(window).height()/1.3)) {       
+        
+        
+      $('.container img').filter(":onScreen").each(function(i) {
+        setTimeout(function() {
+          
+          $('.container img').filter(":onScreen").eq(i).addClass('is-showing');
+          console.log(i);
+        }, 500 * (i+1));
+      })
+      
+ 
+    }
 
-    if (wScroll > $('.contacts-footer-container').offset().top - ($(window).height()-490)) {
+    if (wScroll > $('.contacts-footer-container').offset().top - ($(window).height()-850)) {
       $('footer').css({
         'display': 'block'
       });
