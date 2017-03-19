@@ -25,7 +25,7 @@ a[name="Home"] {
   margin: 15px auto;
   text-transform: uppercase;
   width: 160px;
-  font-family: 'Courier New';
+  font-family: 'Courier', 'Courier New';
   font-size: 34px;
   letter-spacing: 0.1em;
   text-align: center;
@@ -540,6 +540,10 @@ textarea:focus + label, textarea.has-value + label {
  }
 
  @media (max-width: 530px) {
+  #dot {
+    top: -12px;
+  }
+     
   nav {
     width: 100%;
   }
