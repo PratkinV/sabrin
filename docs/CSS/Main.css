@@ -530,7 +530,7 @@ textarea:focus + label, textarea.has-value + label {
    }
 
    .quote {
-     width: 90%;
+     width: 85%;
      font-size: 18px;
    }
 
@@ -563,7 +563,7 @@ textarea:focus + label, textarea.has-value + label {
   }
      
   .hr-text--mobile {
-    width: 90%;  
+    width: 83%;  
     height: 40px;
   }
   .round-window {
