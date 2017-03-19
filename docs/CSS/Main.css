@@ -569,6 +569,15 @@ textarea:focus + label, textarea.has-value + label {
     background-image: url(../PIcs/1-s.jpg);
   }
      
+  .symbol {
+    font-size: 56px;
+    position: relative;
+    left: -5px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+     
   .hr-text--mobile {
     width: 83%;  
     height: 40px;
