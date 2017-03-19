@@ -55,8 +55,6 @@ ul {
   //border: 1px solid red;
 }
 
-
-
 li {
   list-style: none;
   margin: 20px;
@@ -74,26 +72,6 @@ li:hover a, #forward:hover, #back:hover {
   cursor: pointer;
 }
 
-@media (max-width: 470px) {
-  nav {
-    width: 100%;
-  }
-  ul {
-    width: 100%;
-    text-align: center;
-  }
-
-  li {
-    margin-left: 11px;
-    margin-right: 11px;
-  }
-
-  li:last-child {
-    //margin-bottom: 35px;
-  }
-}
-
-
 .banner {
   width: 100%;
   display:flex;
@@ -107,12 +85,6 @@ li:hover a, #forward:hover, #back:hover {
   background-attachment: fixed;
   //background-size: cover;
   //animation: carousel 20s infinite ease-in-out;
-}
-
-@media (max-width: 530px) {
-    .banner {
-        background-image: url(../PIcs/1-s.jpg);
-    }
 }
 
 
@@ -193,12 +165,12 @@ li:hover a, #forward:hover, #back:hover {
 
 .container div {
   width: 285px;
-  height: 450px;  
+  height: 450px;   
   text-align: center;
   //overflow: hidden;
   margin: 20px;
   border-radius: 7px;
-  position: relative;
+  position: relative;    
   padding-bottom: 0;
   transition: all 0.5s ease-in-out;
 }
@@ -210,8 +182,6 @@ li:hover a, #forward:hover, #back:hover {
 
 }
 
-
-
 a img {
   height: 450px;
   margin: 0px auto;
@@ -219,7 +189,7 @@ a img {
   opacity: 0;
   transform: translateX(50px);
   transition: all 0.5s ease-in-out;
-  border-radius: 7px;
+  border-radius: 7px;  
 }
 
 
@@ -305,23 +275,6 @@ p.about-text {
   //border: 1px solid black;
   margin: 80px auto;
   //margin-bottom: 100px;
-}
-
-@media (max-width: 1100px) {
-  p.about-text {
-    width: 100%;
-    position: relative;
-    line-height: 160%;
-  }
-
-  .round-window {
-    left: 0px;
-    background-image: url(../PIcs/Author2.jpg);
-  }
-
-  .quote {
-    width: 60%;
-  }
 }
 
 div.big-photo-1, div.big-photo-2, div.big-photo-3, div.big-photo-4 {
@@ -550,6 +503,23 @@ textarea:focus + label, textarea.has-value + label {
    }
  }
 
+ @media (max-width: 1100px) {
+   p.about-text {
+     width: 100%;
+     position: relative;
+     line-height: 160%;
+   }
+
+   .round-window {
+     left: 0px;
+     background-image: url(../PIcs/Author2.jpg);
+   }
+
+   .quote {
+     width: 60%;
+   }
+ }
+
  @media (max-width: 850px) {
    .container {
      width: 100%;
@@ -570,6 +540,24 @@ textarea:focus + label, textarea.has-value + label {
  }
 
  @media (max-width: 530px) {
+  nav {
+    width: 100%;
+  }
+     
+  ul {
+    width: 100%;
+    text-align: center;
+  }
+
+  li {
+    margin-left: 11px;
+    margin-right: 11px;
+  }  
+  
+  .banner {
+    background-image: url(../PIcs/1-s.jpg);
+  }
+     
   .hr-text--mobile {
     width: 90%;  
     height: 40px;
@@ -593,6 +581,10 @@ textarea:focus + label, textarea.has-value + label {
 
   div.big-photo-3 {  
     background-position: 87% top;  
+  }
+     
+  .container div {
+     overflow: hidden;
   }
      
   .contacts-footer-container {
