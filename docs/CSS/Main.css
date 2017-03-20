@@ -520,7 +520,6 @@ textarea:focus + label, textarea.has-value + label {
    .round-window {
      left: 0px;
      background-image: url(../PIcs/Author2.jpg);
-     background-attachment: scroll;
    }
 
    .quote {
@@ -586,7 +585,6 @@ textarea:focus + label, textarea.has-value + label {
   .round-window {
     height: 310px;
     width: 310px;
-    background-attachment: scroll;
   }
 
   .titles {
@@ -595,17 +593,14 @@ textarea:focus + label, textarea.has-value + label {
 
   div.big-photo-1 {
     background-position: 40% top;
-    background-attachment: scroll;
   }
 
   div.big-photo-2 {
     background-position: 22% top;
-    background-attachment: scroll;
   }
 
   div.big-photo-3 {
     background-position: 87% top;
-    background-attachment: scroll;
   }
 
   .container div {

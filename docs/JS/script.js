@@ -49,7 +49,7 @@ $(document).ready(function() {
         direction: -100
     };
 
-    if ($(window).width() <= 1000) {
+    if ($(window).width() <= 530) {
         speedPar.speed = -2;
         speedPar.direction = 100;
     }
