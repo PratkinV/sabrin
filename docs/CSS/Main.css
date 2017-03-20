@@ -270,17 +270,16 @@ p.about-text {
 }
 
 .round-window {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  //border-radius: 50%;
+  height: 450px;
+  width: 450px;
+  border-radius: 50%;
   position: relative;
   left: 230px;
   background-image: url(../PIcs/Author.jpg);
   background-repeat: no-repeat;
   background-position: 50% calc(80% + 110px);
   background-attachment: fixed;
-  border: 1px solid black;
+  //border: 1px solid black;
   margin: 80px auto;
   //margin-bottom: 100px;
 }
@@ -521,6 +520,7 @@ textarea:focus + label, textarea.has-value + label {
    .round-window {
      left: 0px;
      background-image: url(../PIcs/Author2.jpg);
+     background-attachment: scroll;
    }
 
    .quote {
@@ -586,6 +586,7 @@ textarea:focus + label, textarea.has-value + label {
   .round-window {
     height: 310px;
     width: 310px;
+    background-attachment: scroll;
   }
 
   .titles {
