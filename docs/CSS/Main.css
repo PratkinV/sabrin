@@ -278,9 +278,7 @@ p.about-text {
   background-image: url(../PIcs/Author.jpg);
   background-repeat: no-repeat;
   background-position: 50% calc(80% + 110px);
-
   background-attachment: fixed;
-  -webkit-background-attachment: scroll;
   //border: 1px solid black;
   margin: 80px auto;
   //margin-bottom: 100px;
@@ -292,9 +290,7 @@ div.big-photo-1, div.big-photo-2, div.big-photo-3, div.big-photo-4 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-
   background-attachment: fixed;
-  -webkit-background-attachment: scroll;
   //border: 1px solid red;
 }
 
@@ -524,9 +520,7 @@ textarea:focus + label, textarea.has-value + label {
    .round-window {
      left: 0px;
      background-image: url(../PIcs/Author2.jpg);
-
-     background-attachment: fixed;
-     -webkit-background-attachment: scroll;
+     background-attachment: scroll;
    }
 
    .quote {
@@ -592,9 +586,7 @@ textarea:focus + label, textarea.has-value + label {
   .round-window {
     height: 310px;
     width: 310px;
-
-    background-attachment: fixed;
-      -webkit-background-attachment: scroll;
+    background-attachment: scroll;
   }
 
   .titles {
@@ -603,23 +595,17 @@ textarea:focus + label, textarea.has-value + label {
 
   div.big-photo-1 {
     background-position: 40% top;
-
-    background-attachment: fixed;
-    -webkit-background-attachment: scroll;
+    background-attachment: scroll;
   }
 
   div.big-photo-2 {
     background-position: 22% top;
-
-    background-attachment: fixed;
-    -webkit-background-attachment: scroll;
+    background-attachment: scroll;
   }
 
   div.big-photo-3 {
     background-position: 87% top;
-
-    background-attachment: fixed;
-    -webkit-background-attachment: scroll;
+    background-attachment: scroll;
   }
 
   .container div {
