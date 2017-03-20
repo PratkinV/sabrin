@@ -1,6 +1,6 @@
 $(document).ready(function() {
   //alert('Welcome!');
-    var $i = 2;    
+    var $i = 2;
 
   $('.logo').hover(function() {
     $(this).children('#dot').toggleClass('animated bounce');
@@ -9,13 +9,13 @@ $(document).ready(function() {
 
   function startChangePic() {
      var $timeOut = 500,
-     picForMobile = "";      
-      
+     picForMobile = "";
+
      if ($(window).width() <= 530) {
         picForMobile = "-s";
      }
 
-     function changePic(iterator) {        
+     function changePic(iterator) {
        $('.banner').css({"background-image": "url(PIcs/" + iterator + picForMobile +".jpg)"});
        $i=$i+1;
      }
@@ -41,19 +41,19 @@ $(document).ready(function() {
 
 
   //Start of Parallax related script
-  $(window).scroll(function() {      
-    var wScroll = $(this).scrollTop();     
-    
+  $(window).scroll(function() {
+    var wScroll = $(this).scrollTop();
+
     var speedPar = {
         speed: 2,
         direction: -100
-    };      
-      
-    if ($(window).width() <= 530) {
+    };
+
+    if ($(window).width() <= 1000) {
         speedPar.speed = -2;
         speedPar.direction = 100;
     }
-   
+
 
     $('.banner-slogan').css({
       'transform': 'translate(0px, ' + wScroll/1.35 + '%)',
@@ -80,18 +80,18 @@ $(document).ready(function() {
 
     }
 */
-    if (wScroll > $('.container').offset().top - ($(window).height()/1.3)) {       
-        
-        
+    if (wScroll > $('.container').offset().top - ($(window).height()/1.3)) {
+
+
       $('.container img').filter(":onScreen").each(function(i) {
         setTimeout(function() {
-          
+
           $('.container img').filter(":onScreen").eq(i).addClass('is-showing');
           console.log(i);
         }, 500 * (i+1));
       })
-      
- 
+
+
     }
 
     if (wScroll > $('.contacts-footer-container').offset().top - ($(window).height()-850)) {
