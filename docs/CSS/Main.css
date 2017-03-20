@@ -290,7 +290,7 @@ div.big-photo-1, div.big-photo-2, div.big-photo-3, div.big-photo-4 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-attachment: fixed;
+  background-attachment: scroll;
   //border: 1px solid red;
 }
 
@@ -595,14 +595,17 @@ textarea:focus + label, textarea.has-value + label {
 
   div.big-photo-1 {
     background-position: 40% top;
+    background-attachment: scroll;
   }
 
   div.big-photo-2 {
     background-position: 22% top;
+    background-attachment: scroll;
   }
 
   div.big-photo-3 {
     background-position: 87% top;
+    background-attachment: scroll;
   }
 
   .container div {
