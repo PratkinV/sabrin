@@ -43,25 +43,28 @@ $(document).ready(function() {
   //Start of Parallax related script
   $(window).scroll(function() {
     var wScroll = $(this).scrollTop();
-
+    //$('.symbol').text(wScroll.toString());
+    //console.log(wScroll);
     var speedPar = {
-        speed: 2,
-        direction: -100
+        speed: -2,
+        adjustment: 300,
+        speedSlogan: 1.35
     };
 
     if ($(window).width() <= 530) {
-        speedPar.speed = -2;
-        speedPar.direction = 100;
+        //speedPar.speed = -2;
+        speedPar.adjustment = 100;
+        //speedPar.speedSlogan = 1.35;
     }
 
 
     $('.banner-slogan').css({
-      'transform': 'translate(0px, ' + wScroll/1.35 + '%)',
+      'transform': 'translate(0px, ' + wScroll/speedPar.speedSlogan + '%)',
       'opacity': 1-wScroll/300
     });
 
     $('.banner').css({
-      'background-position': '50% ' + (speedPar.direction-wScroll)/speedPar.speed +'px'
+      'background-position': '50% ' + (speedPar.adjustment-wScroll)/speedPar.speed +'px'
     });
 
 
@@ -82,15 +85,13 @@ $(document).ready(function() {
 */
     if (wScroll > $('.container').offset().top - ($(window).height()/1.3)) {
 
-
-      $('.container img').filter(":onScreen").each(function(i) {
+      $('.container img').filter(":onScreen")
+      .each(function(i) {
         setTimeout(function() {
-
           $('.container img').filter(":onScreen").eq(i).addClass('is-showing');
           console.log(i);
         }, 500 * (i+1));
       })
-
 
     }
 

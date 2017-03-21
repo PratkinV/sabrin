@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/PratkinV/sabrin/issues"
   },
-  "homepage": "https://github.com/PratkinV/sabrin#readme"
+  "homepage": "https://github.com/PratkinV/sabrin#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-watch": "^4.3.11"
+  }
 }
