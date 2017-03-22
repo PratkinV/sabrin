@@ -95,7 +95,7 @@ $(document).ready(function() {
 
     }
 
-    if (wScroll > $('.contacts-footer-container').offset().top - ($(window).height()-850)) {
+    if (wScroll > $('.contacts-footer-container').offset().top - ($(window).height()-500)) {
       $('footer').css({
         'display': 'block'
       });
@@ -148,6 +148,31 @@ $(document).ready(function() {
 
   });
 */
+
+// Prevent resizing the background pictures when Chrome Android URL bar hides
+function greedyJumbotron() {
+    var HEIGHT_CHANGE_TOLERANCE = 70; // Approximately URL bar height in Chrome on tablet
+
+    var jumbotron = $(this);
+    var viewportHeight = $(window).height();
+
+    $(window).resize(function () {
+        if (Math.abs(viewportHeight - $(window).height()) > HEIGHT_CHANGE_TOLERANCE) {
+            viewportHeight = $(window).height();
+            update();
+        }
+    });
+
+    function update() {
+        jumbotron.css('height', (viewportHeight + HEIGHT_CHANGE_TOLERANCE) + 'px');
+    }
+
+    update();
+}
+
+if ($(window).width() <= 530) {
+    $('.greedy-jumbotron').each(greedyJumbotron);
+}
 
 
 
