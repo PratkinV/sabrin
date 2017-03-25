@@ -1,36 +1,48 @@
 $(document).ready(function() {
   //alert('Welcome!');
-    var $i = 2;
+    var $i = 1;
 
   $('.logo').hover(function() {
     $(this).children('#dot').toggleClass('animated bounce');
+  });
+  
+  $('footer a').on('click', function(){
+    return false;
   });
 
 
   function startChangePic() {
      var $timeOut = 500,
-     picForMobile = "";
-
+     picForMobile = "",
+     that = this;
+     
+     // Mobile screen pictures scenario
      if ($(window).width() <= 530) {
         picForMobile = "-s";
-     }
-
-     function changePic(iterator) {
-       $('.banner').css({"background-image": "url(PIcs/" + iterator + picForMobile +".jpg)"});
-       $i=$i+1;
-     }
-
-     if ($i <= 3) {
+     }          
+     
+     // Back button pressed scenario
+     if (that.id == "back") {           
+       $i=$i-2; 
+       if ($i === -1) {$i = 2;}          
+     } 
+      
+     if ($i <= 2) {
        $('.banner').fadeOut($timeOut).fadeIn($timeOut);
        setTimeout(function() {changePic($i)}, $timeOut);
      } else {
-       $i = 1;
+       $i = 0;
        $('.banner').fadeOut($timeOut).fadeIn($timeOut);
        setTimeout(function() {changePic($i)}, $timeOut);
      };
 
      clearInterval(refreshIntervalId);
      refreshIntervalId = setInterval(startChangePic, 7000);
+      
+     function changePic(iterator) {      
+       $('.banner').css({"background-image": "url(PIcs/" + iterator + picForMobile +".jpg)"});
+       $i++;        
+     }
 
   };
 
@@ -38,6 +50,7 @@ $(document).ready(function() {
   var refreshIntervalId = setInterval(startChangePic, 7000);
   //Adding on Click event to the button for changing the pictures
   $('#forward').on('click', startChangePic);
+  $('#back').on('click', startChangePic);
 
 
   //Start of Parallax related script
@@ -56,7 +69,6 @@ $(document).ready(function() {
         speedPar.adjustment = 100;
         //speedPar.speedSlogan = 1.35;
     }
-
 
     $('.banner-slogan').css({
       'transform': 'translate(0px, ' + wScroll/speedPar.speedSlogan + '%)',
@@ -89,7 +101,7 @@ $(document).ready(function() {
       .each(function(i) {
         setTimeout(function() {
           $('.container img').filter(":onScreen").eq(i).addClass('is-showing');
-          console.log(i);
+          //console.log(i);
         }, 500 * (i+1));
       })
 
@@ -107,7 +119,7 @@ $(document).ready(function() {
 
   });
 
-  //Scroll smoothly when clicking on anchor tags script
+  // Scroll smoothly when clicking on anchor tags script
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -120,7 +132,8 @@ $(document).ready(function() {
       }
     }
   });
-
+    
+  // Contacts Form scripts
   $('.awesome-form .input-group textarea, .awesome-form .input-group input').focusout(function() {
     var text_val = $(this).val();
     if (text_val === "") {
@@ -132,50 +145,29 @@ $(document).ready(function() {
   });
 
 
-/*
-  $('.container div img').click(function(){
-    //$(this).css({'transform': 'scale(1.7)'});
-    $(this).parents('.container div').css({'z-index': '3'});
-  //  $(this).parents('.container div').css({'transform': 'translateY(-50%) translateX(-50%)'});
-    $(this).parents('.container div').css({'position': 'fixed'});
-    $(this).parents('.container div').css({'top': '0'});
-    $(this).parents('.container div').css({'left': '0'});
-    $(this).parents('.container div').css({'right': '0'});
-    $(this).parents('.container div').css({'bottom': '0'});
-      $(this).parents('.container div').css({'width': '100%'});
-    //$(this).css({'transform': 'scale(1.7)'});
-    //$(this).parents('.container div').css({'transform': 'translateY(-50%)'});
+  // Prevent resizing the background pictures when Chrome Android URL bar hides
+  function mobileUrlHideFix() {
+      var HEIGHT_CHANGE_TOLERANCE = 70; // Approximately URL bar height in Chrome on tablet
 
-  });
-*/
+      var jumbotron = $(this);
+      var viewportHeight = $(window).height();
 
-// Prevent resizing the background pictures when Chrome Android URL bar hides
-function greedyJumbotron() {
-    var HEIGHT_CHANGE_TOLERANCE = 70; // Approximately URL bar height in Chrome on tablet
+      $(window).resize(function () {
+          if (Math.abs(viewportHeight - $(window).height()) > HEIGHT_CHANGE_TOLERANCE) {
+              viewportHeight = $(window).height();
+              update();
+          }
+      });
 
-    var jumbotron = $(this);
-    var viewportHeight = $(window).height();
+      function update() {
+          jumbotron.css('height', (viewportHeight + HEIGHT_CHANGE_TOLERANCE) + 'px');
+      }
 
-    $(window).resize(function () {
-        if (Math.abs(viewportHeight - $(window).height()) > HEIGHT_CHANGE_TOLERANCE) {
-            viewportHeight = $(window).height();
-            update();
-        }
-    });
+      update();
+  }
 
-    function update() {
-        jumbotron.css('height', (viewportHeight + HEIGHT_CHANGE_TOLERANCE) + 'px');
-    }
-
-    update();
-}
-
-if ($(window).width() <= 530) {
-    $('.greedy-jumbotron').each(greedyJumbotron);
-}
-
-
-
-
+  if ($(window).width() <= 530) {
+      $('.mobile-url-hide-fix').each(mobileUrlHideFix);
+  }
 
 });
