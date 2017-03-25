@@ -579,7 +579,7 @@ textarea:focus + label, textarea.has-value + label {
   }
 
   .banner {
-    background-image: url(../PIcs/1-s.jpg);
+    background-image: url(../PIcs/0-s.jpg);
     background-position: 50% -50px;
   }
 
